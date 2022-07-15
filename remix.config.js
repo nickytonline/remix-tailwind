@@ -1,5 +1,3 @@
-console.log('process.env.NETLIFY', process.env.NETLIFY);
-console.log('process.env.NETLIFY_LOCAL', process.env.NETLIFY_LOCAL);
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
   serverBuildTarget: 'netlify',
