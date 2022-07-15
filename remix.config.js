@@ -1,8 +1,10 @@
+console.log('process.env.NETLIFY', process.env.NETLIFY);
+console.log('process.env.NETLIFY_LOCAL', process.env.NETLIFY_LOCAL);
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
   serverBuildTarget: 'netlify',
   server:
-    process.NODE_ENV === 'production' || process.env.NETLIFY_LOCAL === 'true'
+    process.env.NETLIFY || process.env.NETLIFY_LOCAL
       ? './server.js'
       : undefined,
   ignoredRouteFiles: ['**/.*'],
